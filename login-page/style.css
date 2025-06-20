@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  filter: blur(4px); /* um leve blur no vídeo, pode tirar se quiser */
+}
+
+.login-box {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.07); /* transparente, quase invisível */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  max-width: 320px;
+  width: 80%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  display: inline-block; /* evita esticar verticalmente */
+}
+
+.login-box h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  font-weight: 500;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: #00ffff;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00bbbb;
+}
+
+.fade-zoom {
+  opacity: 0;
+  transform: scale(1.1);
+}
